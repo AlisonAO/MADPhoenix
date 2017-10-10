@@ -11,8 +11,8 @@ u1 = User.create!(email: "someone@hotmail.com", password: "something")
 u2 = User.create!(email: "someoneelse@sparta.com", password: "stuffone")
 
 
-p1 = Project.create!(title: "project1", creator: "greg", image: "https://upload.wikimedia.org/wikipedia/en/2/27/The_Project_Title_Card.jpg", description: "This is a project probably", readme: "I made this", embedd: "")
-p2 = Project.create!(title: "project2", creator: "Bobby", image: "https://upload.wikimedia.org/wikipedia/en/2/27/The_Project_Title_Card.jpg", description: "This is a project probably", readme: "I made this", embedd: "")
+p1 = Project.create!(title: "project1", creator: "greg", image: "https://upload.wikimedia.org/wikipedia/en/2/27/The_Project_Title_Card.jpg", description: "This is a project probably", readme: "I made this", embedd: "", tags: "PROJECT 1")
+p2 = Project.create!(title: "project2", creator: "Bobby", image: "https://upload.wikimedia.org/wikipedia/en/2/27/The_Project_Title_Card.jpg", description: "This is a project probably", readme: "I made this", embedd: "", tags: "PROJECT 2")
 
 UserProject.create!(user_id: u1.id, project_id: p1.id)
 UserProject.create!(user_id: u2.id, project_id: p1.id)
