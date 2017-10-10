@@ -6,26 +6,34 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" type="text/css" href="/style.css">
   </head>
+  	<body>
+  		<header class="sticky-header">
+  			<img src="/images/sparta-global-logo-white.svg" id="logo">
+  
 
-  <body>
 	 <p>
-	            <% if user_signed_in? %>
-	                  Logged in as <strong><%= current_user.email %></strong>.
-	                  <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
-	                  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-	              <% else %>
-	                <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-	                 <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
-	            <% end %>
-	    </p>
+	    <% if user_signed_in? %>
+	        Logged in as <strong><%= current_user.email %></strong>.
+	        	<%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+	       		<%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+	    <% else %>
+	    <div id="login_signup">
+	        <h5 id="signup"><%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link', style: "color:#fff"  %></h5> |
+	        <h5 id="login"><%= link_to "Login", new_user_session_path, :class => 'navbar-link', style: "color:#fff"  %></h5>
+	    </div>
+	    <% end %>
+	</p>
+
 	    <% if notice %>
 	        <p class="alert alert-success"><%= notice %></p>
 	        <% end %>
 	    <% if alert %>
 	        <p class="alert alert-danger"><%= alert %></p>
+	    
 	    <% end %>
-  	
+	      </header>
     <%= yield %>
   </body>
 </html>
