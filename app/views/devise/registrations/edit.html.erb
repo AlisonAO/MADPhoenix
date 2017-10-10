@@ -4,6 +4,16 @@
   <%= devise_error_messages! %>
 
   <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name, autofocus: true %>
+  </div>
+
+  <div class="field">
     <%= f.label :email_address %><br />
     <%= f.email_field :email, autofocus: true %>
   </div>
@@ -11,6 +21,30 @@
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
+
+  <hr>
+
+  <div class="field">
+    <%= f.label :github_link %><br />
+    <%= f.text_field :github_link, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :linkedIn_link %><br />
+    <%= f.text_field :linkedin_link, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Role %><br />
+    <%= f.text_field :position, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :profile_pic %><br />
+    <%= f.text_field :profile_pic, autofocus: true %>
+  </div>
+
+  <hr>
 
   <div class="field">
     <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
