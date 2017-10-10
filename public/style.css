@@ -1,0 +1,59 @@
+body {
+	font-family: "Raleway", sans-serif;
+	background-color: #fff;
+	text-align: center;
+	background-image: url("https://www.spartaglobal.com/img/dark-bg.jpg");
+	background-size: cover;
+	color: #fff;
+	margin-top: 130px;
+	letter-spacing: 1px;
+}
+
+a {
+	text-decoration-style: none;
+}
+
+header {
+	background-color: #01181b;
+	width: 100%;
+	height: 120px;
+	z-index: 999;
+	color: #fff;
+	position: fixed;
+	top: 0;
+	left: 0;
+	text-decoration: none;
+	display: block;
+}
+
+h5 {
+	display: inline-block;
+	/*position: relative;*/
+	margin-right: 5px;
+	right: 5%;
+	top: 20%;
+}
+
+#login_signup {
+	position: absolute;
+    right: 2%;
+    top: 25%;
+    text-decoration: none;
+    font-size: 1.3em;
+}
+
+#logo {
+	height: 60px;
+    width: 350px;
+    position: absolute;
+    top: 20%;
+    left: 2%;
+}
+
+#logout_edit {
+	position: absolute;
+    right: 2%;
+    top: 25%;
+    text-decoration: none;
+    font-size: 1.3em;
+}
