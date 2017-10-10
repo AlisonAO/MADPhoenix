@@ -1,0 +1,11 @@
+<h2>project index</h2>
+
+<h3><%= project.title %></h3>
+<h3><%= project.creator %></h3>
+<img src="<%= project.image %>">
+<p><%= project.description %></p>
+<p><%= project.readme %></p>
+<p><%= project.tags %></p>
+
+<%= link_to "Show Page", project if action_name == "index" %>
+<%= link_to "Edit Page", edit_project_path(project) %> 

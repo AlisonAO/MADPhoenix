@@ -1,0 +1,26 @@
+<%= form_for(@project) do |f| %>
+
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+
+  <%= f.label :creator %>
+  <%= f.text_field :creator %>
+
+  <%= f.label :image %>
+  <%= f.text_field :image %>
+
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+
+
+  <%= f.label :readme %>
+  <%= f.text_field :readme %>
+
+  <%= f.label :embedd %>
+  <%= f.text_field :embedd %>
+
+  <%= f.label :tags %>
+  <%= f.text_field :tags %>
+
+  <%= f.submit %>
+<% end %>
