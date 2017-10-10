@@ -1,5 +1,12 @@
 <h1>Show Page for <%= @project.title %></h1>
+
+<%= link_to "Back to Home", projects_path %>
+
   <%= render @project %>
+<br>
+
+<%= link_to "Edit Page", edit_project_path(@project) %> 
+
 <br>
 
 <%= link_to "Delete", @project, method: :delete, data: { confirm: "Are you sure?" } %>
