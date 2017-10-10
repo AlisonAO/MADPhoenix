@@ -24,6 +24,7 @@ header {
 	left: 0;
 	text-decoration: none;
 	display: block;
+	margin-bottom: 0;
 }
 
 h5 {
@@ -33,6 +34,35 @@ h5 {
 	right: 5%;
 	top: 20%;
 }
+
+#landing {
+	height: 400px;
+	width: 100%;
+	background-color: #01181b;
+	text-align: left;
+	margin-top: -10px;
+	padding-right: 10px;
+	position: absolute;
+    right: 0%;
+    display: block;
+    background-image: url("/maxresdefault.jpg");
+    background-repeat: no-repeat; 	
+    background-size: cover;
+}
+
+#landingText {
+	height: 200px;
+	width: 600px;
+	position: relative;
+	top: 25%;
+	left: 10%;
+
+}
+
+#landingText p {
+	padding-top: 70px;
+}
+
 
 #login_signup {
 	position: absolute;
@@ -56,4 +86,9 @@ h5 {
     top: 25%;
     text-decoration: none;
     font-size: 1.3em;
+}
+
+#block {
+	height: 400px;
+	width: 100%;
 }
