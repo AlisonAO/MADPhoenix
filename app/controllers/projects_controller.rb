@@ -27,7 +27,7 @@ def index
 
   def update
     @project = Project.find(params[:id])
-    if project.update(project_params)
+    if @project.update(project_params)
       redirect_to project
     else
       render :edit
