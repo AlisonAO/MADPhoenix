@@ -13,9 +13,11 @@ def index
   end
 
   def create
-    new_project = Project.create(project_params)
-    new_project.save
-    redirect_to new_project
+    @project = Project.create(project_params)
+    if project.save
+      redirect_to @project
+    else
+      render :new
   end
 
   def edit
