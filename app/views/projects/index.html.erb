@@ -6,8 +6,18 @@
 </div>
 
 <!-- <div id="block"></div> -->
+<br>
+<div>
+	<%= form_tag(projects_path, :method => "get", id: "search-form") do %>
+	<%= text_field_tag :search, params[:search], placeholder: "Search Projects" %>
+	<%= submit_tag "Search", :name => nil %>
+	<% end %>
+	<% if @projects.blank? %>
+	<h4>There are no Projects containing the term <%= params[:search] %>.</h4>
+	<% end %>
+</div>
 <h3 id="new-project"><%= link_to "New Project", new_project_path %></h3>
-<h3> <%= link_to "Search", projects_search_path %></h3> 
+
 
 
 <div class="projects">
