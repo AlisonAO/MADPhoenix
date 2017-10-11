@@ -5,9 +5,11 @@
   <%= render @project %>
 <br>
 
-<%= link_to "Edit Page", edit_project_path(@project) %> 
+<% if user_signed_in? && current_user.id == @project.user_id %>
+	<%= link_to "Edit Page", edit_project_path(@project) %> 
 
-<br>
+	<br>
 
-<%= link_to "Delete", @project, method: :delete, data: { confirm: "Are you sure?" } %>
+	<%= link_to "Delete", @project, method: :delete, data: { confirm: "Are you sure?" } %>
+<% end %>
 

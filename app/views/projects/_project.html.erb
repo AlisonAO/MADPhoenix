@@ -9,7 +9,7 @@
 				<p><%= project.description %></p>
 				<p><%= project.readme %></p>
 				<p><%= project.tags %></p>
-				<%= link_to "Show Page", project if action_name == "index" %>	
+				<%= link_to "Show Page", project unless action_name == "show" %>	
 			</div>
 	</div>
 </div>
