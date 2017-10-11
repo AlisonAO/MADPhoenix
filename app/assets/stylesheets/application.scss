@@ -42,11 +42,42 @@
     background-color: transparent;
     letter-spacing: 5px;
     font-size: 20px;
-    font-family: "Raleway", sans-serif;
     text-align: center;
     color: white;
     width: 450px;
     height: 33px;
     border-color: transparent;
     border-bottom-color: white;
+}
+
+#deltit {
+	font-family: "Raleway", sans-serif;
+	font-weight: 700px;
+	color: red;
+	letter-spacing: 10px;
+}
+
+#deltit2 {
+	font-family: "Raleway", sans-serif;
+	font-weight: 700px;
+	color: #d99090;
+	letter-spacing: 4px;	
+}
+
+#mintxt {
+	font-family: "Raleway";
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: #d99090;
+}
+
+.sbutton {
+	font-size: 2em;
+}
+
+#backbut {
+	text-decoration: underline;
+    font-size: 22px;
+    color: #34beeb;
+    letter-spacing: 5px;
 }

@@ -25,7 +25,7 @@
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
 
-  <br><br><br>
+  <br><br>
   <hr>
   <br><br><br>
 
@@ -49,7 +49,7 @@
     <%= f.text_field :profile_pic, autofocus: true, class: "boxfield" %>
   </div>
 
-  <br><br><br>
+  <br><br>
   <hr>
   <br><br><br>
 
@@ -58,7 +58,8 @@
     <%= f.password_field :password, autocomplete: "off", class: "boxfield" %>
     <% if @minimum_password_length %>
       <br />
-      <em><%= @minimum_password_length %> characters minimum</em>
+      <em><div id="mintxt"><%= @minimum_password_length %> characters minimum </div></em>
+      <br>
     <% end %>
   </div>
 
@@ -73,14 +74,23 @@
   </div>
 
   <div class="actions">
-    <%= f.submit "Update Profile" %>
+    <%= f.submit "Update Profile", class: "sbutton" %>
   </div>
+
+<br><br>
 <% end %>
 
-<h3>Account Deletion</h3>
+<hr>
+<br><br>
 
-<p>Delete Sparta Profile? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+<h3 id="deltit">Account Deletion</h3>
 
-<%= link_to "Back", :back %>
+<p id="deltit2">Delete Sparta Account? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "sbutton" %></p>
+
+<%= link_to "BACK", :back, id: "backbut" %>
+
+<br><br><br>
+<hr>
+<br><br>
 
 </div>
