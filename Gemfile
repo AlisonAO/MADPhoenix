@@ -38,6 +38,8 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 gem "devise"
 
+gem 'mini_magick'
+
 gem 'filterrific'
 
 group :development, :test do
