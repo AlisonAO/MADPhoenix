@@ -6,9 +6,11 @@
 </div>
 
 <!-- <div id="block"></div> -->
-<h3 id="new-project"><%= link_to "New Project", new_project_path %></h3>
+<% if user_signed_in? %>
+	<h3 id="new-project"><%= link_to "New Project", new_project_path %></h3>
+<% end %>
 
 
 <div class="projects">
-	<%= render @projects %>
+	<%= render @projects, class: "indexpics" %>
 </div>

@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'extras/profile'
+
+  get 'extras/home'
+
 	devise_for :users
  	resources :projects
 
