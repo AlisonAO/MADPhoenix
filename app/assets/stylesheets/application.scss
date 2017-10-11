@@ -30,6 +30,14 @@
 	text-align: center;
 }
 
+.boxlabrem {
+    color: white;
+    font-family: "Raleway", sans-serif;
+    font-weight: 300;
+    letter-spacing: 7px;
+    text-align: center;
+}
+
 #pwspecific {
 	letter-spacing: 5px;
 }
@@ -82,12 +90,23 @@
     letter-spacing: 5px;
 }
 
-#submit {
+.submit {
 	font-size: 25px;
     background-color: #020511;
     border-radius: 7px;
     color: white;
     height: 50px;
-    width: 200px;
+    width: 400px;
     letter-spacing: 6px;
+}
+
+.submit2 {
+    font-size: 15px;
+    border-radius: 7px;
+    color: white;
+    border-color: white;
+    height: 40px;
+    width: 160px;
+    letter-spacing: 6px;
+    text-decoration: none;
 }
