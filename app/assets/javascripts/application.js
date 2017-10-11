@@ -13,3 +13,17 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
+//= require jquery
+//= require jquery_ujs
+
+$(function () {
+	$('.smoothScroll').click(function (e) {
+		var linkHref = $(this).attr('href');
+
+		$('html, body').animate({
+			scrollTop: $(linkHref).offset().top
+		}, 1500)
+		e.preventDefault();
+
+	})
+});
