@@ -1,41 +1,42 @@
 class ProjectsController < ApplicationController
-
+  before_action :authenticate_user!
+  skip_before_action :authenticate_user!, only: [:index, :show]
 def index
     @projects = Project.all
   end
 
   def show
-    @project = Project.find(params[:id])
+     @project = Project.find(params[:id])
   end
 
   def new
-    @project = Project.new
+    @project = current_user.projects.new
   end
 
   def create
-    @project = Project.create(project_params)
+    @project = current_user.projects.create(project_params)
     if @project.save
-      redirect_to @project
+     redirect_to "/projects"
     else
       render :new
     end
   end
 
   def edit
-    @project = Project.find(params[:id])
+    @project = current_user.projects.find(params[:id])
   end
 
   def update
-    @project = Project.find(params[:id])
-    if @project.update(project_params)
-      redirect_to project
+    @project = current_user.projects.find(params[:id])
+    if @project.update!(project_params)
+      redirect_to "/projects"
     else
       render :edit
     end
   end
 
   def destroy
-    Project.destroy(params[:id])
+    current_user.projects.destroy(params[:id])
     redirect_to projects_url
   end
 
