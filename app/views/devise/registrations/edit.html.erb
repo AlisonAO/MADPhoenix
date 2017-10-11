@@ -1,77 +1,96 @@
-<h2>Edit Spartan <%= resource_name.to_s.humanize %></h2>
+<h2 class="formtitle">Edit Spartan <%= resource_name.to_s.humanize %></h2>
 
+<br><br>
+
+<div class="form1">
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
 
   <div class="field">
-    <%= f.label :first_name %><br />
-    <%= f.text_field :first_name, autofocus: true %>
+    <div class="boxlab"><%=  f.label :first_name %><br /></div>
+    <%= f.text_field :first_name, autofocus: true, class: "boxfield" %>
   </div>
 
   <div class="field">
-    <%= f.label :last_name %><br />
-    <%= f.text_field :last_name, autofocus: true %>
+    <div class="boxlab"><%= f.label :last_name %><br /></div>
+    <%= f.text_field :last_name, autofocus: true, class: "boxfield" %>
   </div>
 
   <div class="field">
-    <%= f.label :email_address %><br />
-    <%= f.email_field :email, autofocus: true %>
+    <div class="boxlab"><%= f.label :email_address %><br /></div>
+    <%= f.email_field :email, autofocus: true, class: "boxfield" %>
   </div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
 
+  <br><br>
   <hr>
+  <br><br><br>
 
   <div class="field">
-    <%= f.label :github_link %><br />
-    <%= f.text_field :github_link, autofocus: true %>
+    <div class="boxlab"><%= f.label :github_link %><br /></div>
+    <%= f.text_field :github_link, autofocus: true, class: "boxfield" %>
   </div>
 
   <div class="field">
-    <%= f.label :linkedIn_link %><br />
-    <%= f.text_field :linkedin_link, autofocus: true %>
+    <div class="boxlab"><%= f.label :linkedIn_link %><br /></div>
+    <%= f.text_field :linkedin_link, autofocus: true, class: "boxfield" %>
   </div>
 
   <div class="field">
-    <%= f.label :Role %><br />
-    <%= f.text_field :position, autofocus: true %>
+    <div class="boxlab"><%= f.label :Role %><br /></div>
+    <%= f.text_field :position, autofocus: true, class: "boxfield" %>
   </div>
 
   <div class="field">
-    <%= f.label :profile_pic %><br />
-    <%= f.text_field :profile_pic, autofocus: true %>
+    <div class="boxlab"><%= f.label :profile_pic %><br /></div>
+    <%= f.text_field :profile_pic, autofocus: true, class: "boxfield" %>
   </div>
 
+  <br><br>
   <hr>
+  <br><br><br>
 
   <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "off" %>
+    <div id="pwspecifc" class="boxlab"><%= f.label :password %> <i>(If changing)</i><br /></div>
+    <%= f.password_field :password, autocomplete: "off", class: "boxfield" %>
     <% if @minimum_password_length %>
       <br />
-      <em><%= @minimum_password_length %> characters minimum</em>
+      <em><div id="mintxt"><%= @minimum_password_length %> characters minimum </div></em>
+      <br>
     <% end %>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+    <div class="boxlab"><%= f.label :password_confirmation %><br /></div>
+    <%= f.password_field :password_confirmation, autocomplete: "off", class: "boxfield" %>
   </div>
 
   <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "off" %>
+    <div class="boxlab"><%= f.label :current_password %> <i>(To save your changes)</i><br /></div>
+    <%= f.password_field :current_password, autocomplete: "off", class: "boxfield" %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Update Profile" %>
+    <%= f.submit "Update Profile", class: "sbutton" %>
   </div>
+
+<br><br>
 <% end %>
 
-<h3>Account Deletion</h3>
+<hr>
+<br><br>
 
-<p>Delete Sparta Profile? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+<h3 id="deltit">Account Deletion</h3>
 
-<%= link_to "Back", :back %>
+<p id="deltit2">Delete Sparta Account? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "sbutton" %></p>
+
+<%= link_to "BACK", :back, id: "backbut" %>
+
+<br><br><br>
+<hr>
+<br><br>
+
+</div>
