@@ -24,6 +24,7 @@ header {
 	left: 0;
 	text-decoration: none;
 	display: block;
+	margin-bottom: 0;
 }
 
 h5 {
@@ -33,6 +34,39 @@ h5 {
 	right: 5%;
 	top: 20%;
 }
+
+#landing {
+	height: 400px;
+	width: 100%;
+	background-color: #01181b;
+	text-align: left;
+	margin-top: -10px;
+	padding-right: 10px;
+	/*position: absolute;*/
+    right: 0%;
+    display: block;
+    background-image: url("/maxresdefault.jpg");
+    background-repeat: no-repeat; 	
+    background-size: cover;
+}
+
+#landingText {
+	height: 200px;
+	width: 600px;
+	position: relative;
+	top: 25%;
+	left: 10%;
+
+}
+
+#landingText p {
+	padding-top: 70px;
+}
+
+#new-project {
+	margin: 60px;
+}
+
 
 #login_signup {
 	position: absolute;
@@ -57,3 +91,80 @@ h5 {
     text-decoration: none;
     font-size: 1.3em;
 }
+
+/*#block {
+	height: 400px;
+	width: 100%;
+}*/
+
+.projects {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap; 
+	justify-content: space-evenly;
+	width: 100%;
+}
+
+.project {
+	width: 40%;
+	height: 350px;
+	display: inline-block;
+	margin-bottom: 200px;
+}
+
+.project-image {
+	/*height: 600px;*/
+	/*width: 100%;*/
+	z-index: -1;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+  	top: 0;
+  	left: 0;
+}
+
+.hover-container {
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+
+.hover-container .hover-mask {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+  	top: 0;
+  	left: 0;
+	
+	z-index: 2;
+	opacity: 0;
+	overflow:visible;
+	background-color: rgba(0,0,0,0.7);
+	box-sizing:border-box;
+	transition: all 0.4s ease-in-out;
+}
+
+/*.hover-container a.info {
+   position:relative;
+   top:-10px;  Center the link 
+   opacity: 0;
+   transition: opacity 0.5s 0s ease-in-out;
+}*/
+
+.hover-container:hover .hover-mask {
+	position: absolute;
+
+	height: 100%;
+	width: 100%;
+  	top: 0;
+  	left: 0;
+  	
+	z-index: 2;
+	opacity: 1;
+	background-color: rgba(0,0,0,0.7);
+}
+
+/*.hover-container:hover a.info {
+   opacity:1;
+   transition-delay: 0.3s;
+}*/

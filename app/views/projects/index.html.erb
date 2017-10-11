@@ -1,4 +1,14 @@
-<h1> All Projects </h1>
-<%= link_to "New Project", new_project_path %>
+<div id="landing">
+	<div id="landingText">
+		<h3>Welcome to the Sparta Global project portfolio web app!</h3>
+		<p>On this site you will find a sample of the best that Spartans have to offer. You will find a directory of students and a show page of some of the top projects as voted by the Sparta community!</p>
+	</div>
+</div>
 
-<%= render @projects %>
+<!-- <div id="block"></div> -->
+<h3 id="new-project"><%= link_to "New Project", new_project_path %></h3>
+
+
+<div class="projects">
+	<%= render @projects %>
+</div>
