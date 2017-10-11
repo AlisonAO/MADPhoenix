@@ -12,13 +12,13 @@
 <% end %>
 
 <br>
-<div>
-	<%= form_tag(projects_path, :method => "get", id: "search-form") do %>
-	<%= text_field_tag :search, params[:search], placeholder: "Search Projects" %>
-	<%= submit_tag "Search", :name => nil %>
+<div class="search">
+	<div><%= form_tag(projects_path, :method => "get", id: "search-form") do %></div>
+	<%= text_field_tag :search, params[:search], placeholder: "Search Projects", class: "boxfield" %>
+	<%= submit_tag " ", :name => nil, class: 'button' %>
 	<% end %>
 	<% if @projects.blank? %>
-	<h4>There are no Projects containing the term <%= params[:search] %>.</h4>
+	<h4 class="search-text">There are no Projects containing the term <%= params[:search] %>.</h4>
 	<% end %>
 </div>
 
