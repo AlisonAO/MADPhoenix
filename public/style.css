@@ -101,15 +101,15 @@ h5 {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap; 
-	justify-content: space-evenly;
+	/*justify-content: space-evenly;*/
 	width: 100%;
+	margin-top: 150px;
 }
 
 .project {
-	width: 40%;
-	height: 350px;
 	display: inline-block;
-	margin-bottom: 200px;
+	width: 20%;
+    height: 125px;
 }
 
 .project-image {
@@ -163,6 +163,7 @@ h5 {
 	opacity: 1;
 	background-color: rgba(0,0,0,0.7);
 }
+
 
 /*.hover-container:hover a.info {
    opacity:1;
