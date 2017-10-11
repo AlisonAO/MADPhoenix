@@ -5,7 +5,10 @@
 	</div>
 </div>
 
-<div id="block"></div>
-<%= link_to "New Project", new_project_path %>
+<!-- <div id="block"></div> -->
+<h3 id="new-project"><%= link_to "New Project", new_project_path %></h3>
 
-<%= render @projects %>
+
+<div class="projects">
+	<%= render @projects %>
+</div>
