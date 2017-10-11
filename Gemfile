@@ -6,6 +6,8 @@ git_source(:github) do |repo_name|
 end
 
 gem "paperclip", "~> 4.2"
+gem 'aws-sdk', '~> 1.5.7' # amazon web services gem
+gem 'dotenv-rails', :groups => [:development, :test]  # env variable to keep sensitive data hidden
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
