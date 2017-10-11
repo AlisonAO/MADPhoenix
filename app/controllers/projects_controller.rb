@@ -1,7 +1,17 @@
 class ProjectsController < ApplicationController
   before_action :authenticate_user!
   skip_before_action :authenticate_user!, only: [:index, :show]
-def index
+
+  def index
+    @projects = Project.all
+    if params[:search]
+      @projects = Project.search(params[:search]).order("created_at DESC")
+    else
+      @projects = Project.all.order("created_at DESC")
+    end
+  end
+
+  def search
     @projects = Project.all
   end
 
