@@ -4,6 +4,7 @@
 
   <%= render @project %>
 <br>
+<br>
 
 <% if user_signed_in? && current_user.id == @project.user_id %>
 	<%= link_to "Edit Page", edit_project_path(@project) %> 

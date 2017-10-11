@@ -26,7 +26,7 @@
 	color: white;
 	font-family: "Raleway", sans-serif;
 	font-weight: 300;
-	letter-spacing: 15px;
+	letter-spacing: 7px;
 	text-align: center;
 }
 
@@ -90,4 +90,18 @@
     height: 50px;
     width: 200px;
     letter-spacing: 6px;
+}
+
+.error {
+    font-family: "Raleway", sans-serif;
+    color: white;
+    list-style-type: none;
+
+        
+}
+
+.validation-error {
+    
+   color: red;
+
 }

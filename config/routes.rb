@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'extras/home'
 
 	devise_for :users
-	get '/projects/search' => 'projects#search'
+
  	resources :projects
 
   
