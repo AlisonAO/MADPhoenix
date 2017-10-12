@@ -7,25 +7,55 @@
 		Click on the project screenshot to see the full description and a more in-depth explanation of what goes into creating one of our projects.</p>
 	</div>
 </div>
+<div id="body-div">
+	<a href="#all-project" class="smoothScroll"><button class="button">See All Projects</button></a>
 
-<!-- <div id="block"></div> -->
-<a href="#all-project" class="smoothScroll"><button class="button">See All Projects</button></a>
+	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+	  <!-- Indicators -->
+	  <ol class="carousel-indicators">
+	    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+	    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+	    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+	  </ol>
 
-<% if user_signed_in? %>
-	<h3 id="new-project"><%= link_to "New Project", new_project_path %></h3>
-<% end %>
+	  <!-- Wrapper for slides -->
+	  <div class="carousel-inner">
+	    <div class="item active">
+	      <img src="" alt="...">
+	    </div>
+	    <div class="item">
+	      <img src="..." alt="...">
+	    </div>
+	    ...
+	  </div>
 
-<br>
-<div class="search">
-	<div><%= form_tag(projects_path, :method => "get", id: "search-form") do %></div>
-	<%= text_field_tag :search, params[:search], placeholder: "Search Projects", class: "boxfield" %>
-	<%= submit_tag " ", :name => nil, class: 'search-button' %>
+	  <!-- Controls -->
+	  <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+	    <span class="glyphicon glyphicon-chevron-left"></span>
+	  </a>
+	  <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+	    <span class="glyphicon glyphicon-chevron-right"></span>
+	  </a>
+	</div>
+
+
+
+	<% if user_signed_in? %>
+		<h3 id="new-project"><%= link_to "New Project", new_project_path %></h3>
 	<% end %>
-	<% if @projects.blank? %>
-	<h4 class="search-text">There are no Projects containing the term <%= params[:search] %>.</h4>
-	<% end %>
-</div>
-<a id="all-project"></a>
-<div class="projects">
-	<%= render @projects, class: "indexpics" %>
+
+	<br>
+	<div class="search">
+		<div><%= form_tag(projects_path, :method => "get", id: "search-form") do %></div>
+		<%= text_field_tag :search, params[:search], placeholder: "Search Projects", class: "boxfield" %>
+		<%= submit_tag " ", :name => nil, class: 'search-button' %>
+		<% end %>
+		<% if @projects.blank? %>
+		<h4 class="search-text">There are no Projects containing the term <%= params[:search] %>.</h4>
+		<% end %>
+	</div>
+	<a id="all-project"></a>
+	<div class="projects">
+		<%= render @projects, class: "indexpics" %>
+	</div>
 </div>
