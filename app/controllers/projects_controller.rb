@@ -12,9 +12,7 @@ class ProjectsController < ApplicationController
     end
   end
 
-  def search
-    @projects = Project.all
-  end
+ 
 
   def show
     @cond == true

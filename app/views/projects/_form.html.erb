@@ -1,39 +1,51 @@
 
 <% if @project.errors.any? %>
-  <h3><%= pluralize(@project.errors.count, "error") %> prohibited your project from being saved:</h3>
+  <h3 class="boxlab"><%= pluralize(@project.errors.count, "error") %> prohibited your project from being saved:</h3>
 
-  <ul>
-    <% @project.errors.full_messages.each do |msg| %>
-      <li> <%= msg %></li>
-    <% end %>
-
-  </ul>
+ 
   
 <% end %>
 
-
+<div class="form1 form2">
 <%= form_for(@project) do |f| %>
 
-  <%= f.label :title %>
-  <%= f.text_field :title %>
+ <div class="boxlab">
+  <div><%= f.label :title %><br></div>
+    <%= f.text_field :title, class: "boxfield" %>
+</div>
 
-  <%= f.label :creator %>
-  <%= f.text_field :creator %>
+<div class="boxlab">
+ <div><%= f.label :creator %><br></div>
+  <%= f.text_field :creator, class: "boxfield" %>
+</div>
 
-  <%= f.label :image %>
-  <%= f.file_field :image %>
+<div class="boxlab">
+  <div><%= f.label :image %><br></div>
+  <%= f.file_field :image, class: "boxfield" %>
+</div>
 
-  <%= f.label :description %>
-  <%= f.text_field :description %>
+<div class="boxlab">
+  <div><%= f.label :description %><br></div>
+  <%= f.text_field :description, class: "boxfield" %>
+</div>
 
-  <%= f.label :readme %>
-  <%= f.text_field :readme %>
+<div class="boxlab"> 
+  <div><%= f.label :readme %><br></div>
+  <%= f.text_field :readme, class: "boxfield" %>
+</div>
 
-  <%= f.label :embedd %>
-  <%= f.text_field :embedd %>
+<div class="boxlab">
+  <div><%= f.label :embedd %><br></div>
+  <%= f.text_field :embedd, class: "boxfield" %>
+</div>
 
-  <%= f.label :tags %>
-  <%= f.text_field :tags %>
+<div class="boxlab">
+  <div><%= f.label :tags %><br></div>
+  <%= f.text_field :tags, class: "boxfield" %>
+</div>
 
   <%= f.submit %>
 <% end %>
+</div>
+
+
