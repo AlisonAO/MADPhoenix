@@ -159,14 +159,19 @@ transition: all 1s ease-out;
 .button {
     -webkit-transition-duration: 0.4s; 
     transition-duration: 0.4s;
-    background-color: #01181b;
-    height: 70px;
-    width: 160px;
-  border-radius: 16px;
+    background-color: transparent;
     color: white;
-    font-size: 1em;
+    font-family: "Raleway", sans-serif;
+    font-weight: 300;
+    letter-spacing: 5px;
+    text-align: center;
+    font-size: 20px;
     margin-top: 30px;
-}
+    width: 450px;
+    height: 33px;
+    border-color: white;
+    border-width: 1px;
+    }
 
 .button:focus {
   outline: none;
@@ -174,5 +179,5 @@ transition: all 1s ease-out;
 
 .button:hover {
   background-color: transparent;
-    color: white;
+  color: white;
 }
