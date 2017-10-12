@@ -1,7 +1,0 @@
- <% @projects.each do |project| %>
-    <%= User.find(project.user_id).name %>
-    <%= simple_format project.content %>
-    <%= pluralize(project.likes, 'like') %>
-    <%= link_to content_tag(:span, '', class: 'glyphicon glyphicon-thumbs-up') + 
-    ' Like it', like_project_path(:id => project.id), method: :post %>
- <% end %>
