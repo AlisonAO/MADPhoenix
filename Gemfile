@@ -9,8 +9,13 @@ gem "paperclip"
 gem 'aws-sdk', ' ~> 2.3' # amazon web services gem
 gem 'dotenv-rails', :groups => [:development, :test]  # env variable to keep sensitive data hidden
 
-gem 'bootstrap-sass', '~> 3.2.0'
+
+gem "redcarpet"
+
+gem 'bootstrap-sass', '~> 3.3.6'
+
 gem 'autoprefixer-rails'
+
 
 gem 'jquery-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
