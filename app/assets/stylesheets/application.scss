@@ -108,6 +108,7 @@
     height: 40px;
     width: 160px;
     letter-spacing: 6px;
+  text-decoration: none;
 }
 
 .search-text {
@@ -153,8 +154,8 @@ opacity:0.2;
 -moz-transition: all 1s ease-out;
 -o-transition: all 1s ease-out;
 transition: all 1s ease-out;
-}
 
+}
 .button {
     -webkit-transition-duration: 0.4s; 
     transition-duration: 0.4s;
