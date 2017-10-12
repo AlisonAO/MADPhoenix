@@ -10,7 +10,8 @@ body {
 }
 
 a {
-	text-decoration-style: none;
+	text-decoration: none;
+	color: white;
 }
 
 header {
@@ -72,6 +73,8 @@ h5 {
 
 #new-project {
 	margin: 60px;
+	letter-spacing: 6px;
+	font-weight: 300;
 }
 
 
