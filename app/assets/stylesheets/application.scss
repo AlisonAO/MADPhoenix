@@ -1,4 +1,4 @@
-/*
+  /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
  *
@@ -9,15 +9,14 @@
  * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
- *
  *= require_tree .
  *= require_self
+
+
  */
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
-
-
 
 #body-div {
     background-image: url("https://www.spartaglobal.com/img/dark-bg.jpg");
@@ -42,6 +41,7 @@
     background-size: cover;
     z-index: 0;
 }
+
 .carousel-inner {
   height: 500px;
 }

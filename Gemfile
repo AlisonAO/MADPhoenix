@@ -5,9 +5,12 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem "paperclip", "~> 4.2"
-gem 'aws-sdk', '~> 1.5.7' # amazon web services gem
+gem "paperclip"
+gem 'aws-sdk', ' ~> 2.3' # amazon web services gem
 gem 'dotenv-rails', :groups => [:development, :test]  # env variable to keep sensitive data hidden
+
+gem 'bootstrap-sass', '~> 3.2.0'
+gem 'autoprefixer-rails'
 
 gem 'jquery-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
