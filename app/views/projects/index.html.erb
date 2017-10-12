@@ -9,6 +9,9 @@
 </div>
 
 <!-- <div id="block"></div> -->
+
+<br><br><br><br><br><br>
+
 <a href="#all-project" class="smoothScroll"><button class="button">See All Projects</button></a>
 
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
@@ -44,7 +47,8 @@
 	<h3 id="new-project"><%= link_to "New Project", new_project_path %></h3>
 <% end %>
 
-<br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+
 <div class="search">
 	<div><%= form_tag(projects_path, :method => "get", id: "search-form") do %></div>
 	<%= text_field_tag :search, params[:search], placeholder: "Search Projects", class: "boxfield" %>
@@ -57,4 +61,8 @@
 <a id="all-project"></a>
 <div class="projects">
 	<%= render @projects, class: "indexpics" %>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
 </div>
