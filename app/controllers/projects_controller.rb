@@ -3,6 +3,7 @@ class ProjectsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
+    @cond == false
     @projects = Project.all
     if params[:search]
       @projects = Project.search(params[:search]).order("created_at DESC")
@@ -14,6 +15,7 @@ class ProjectsController < ApplicationController
  
 
   def show
+    @cond == true
      @project = Project.find(params[:id])
   end
 

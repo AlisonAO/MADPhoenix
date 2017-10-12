@@ -10,14 +10,14 @@
   </head>
   	<body>
   		<header class="sticky-header">
-  			<img src="/images/sparta-global-logo-white.svg" id="logo">
+  			<a href="/projects"><img src="/images/sparta-global-logo-white.svg" id="logo"></a>
   
 	 <p>
 	    <% if user_signed_in? %>
 	      <!--   Logged in as <strong><%= current_user.email %></strong>. -->
 	        <div id="logout_edit">
-	        	<%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
-	       		<%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+	        	<%= link_to 'Edit Account', edit_user_registration_path, :class => 'navbar-link', class: "submit2" %> |
+	       		<%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link', class: "submit2"  %>
 	       	</div>
 	    <% else %>
 	    <div id="login_signup">

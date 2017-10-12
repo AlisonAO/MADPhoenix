@@ -1,8 +1,17 @@
-<h1>Show Page for <%= @project.title %></h1>
+<h1><%= @project.title %></h1>
+
+<%= render @project %>
+
+<br>
 
 <%= link_to "Back to Home", projects_path %>
 
-  <%= render @project %>
+  
+	<h3><%= @project.creator %></h3>
+	<p><%= @project.description %></p>
+	<p><%= @project.readme %></p>
+	<p><%= @project.tags %></p>
+
 <br>
 <br>
 
