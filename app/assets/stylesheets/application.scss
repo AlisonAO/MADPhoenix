@@ -179,5 +179,14 @@ transition: all 1s ease-out;
 
 .button:hover {
   background-color: transparent;
-  color: white;
+    color: white;
+}
+
+#wtext {
+  letter-spacing: 5px;
+}
+
+.wwtext {
+  letter-spacing: 2px;
+  font-size: 17px;
 }
