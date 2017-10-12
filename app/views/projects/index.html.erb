@@ -18,6 +18,11 @@
 	    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
 	  </ol>
 
+<br><br><br><br><br><br>
+
+<a href="#all-project" class="smoothScroll"><button class="button">See All Projects</button></a>
+
+
 	  <!-- Wrapper for slides -->
 	  <div class="carousel-inner">
 	    <div class="item active">
@@ -58,4 +63,22 @@
 	<div class="projects">
 		<%= render @projects, class: "indexpics" %>
 	</div>
+  
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<div class="search">
+	<div><%= form_tag(projects_path, :method => "get", id: "search-form") do %></div>
+	<%= text_field_tag :search, params[:search], placeholder: "Search Projects", class: "boxfield" %>
+	<%= submit_tag " ", :name => nil, class: 'search-button' %>
+	<% end %>
+	<% if @projects.blank? %>
+	<h4 class="search-text">There are no Projects containing the term <%= params[:search] %>.</h4>
+	<% end %>
+</div>
+<a id="all-project"></a>
+<div class="projects">
+	<%= render @projects, class: "indexpics" %>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+
 </div>

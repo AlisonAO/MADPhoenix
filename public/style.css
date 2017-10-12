@@ -130,8 +130,11 @@ h5 {
 
 .project {
 	display: inline-block;
-	width: 20%;
-    height: 125px;
+	width: 40%;
+    height: 405px;
+    margin-right: 100px;
+    margin-left: 50px;
+    margin-bottom: 100px;
 }
 
 .project-image {
