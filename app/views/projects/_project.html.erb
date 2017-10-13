@@ -1,9 +1,11 @@
 <div class="project">
 	<div class="hover-container">
-		<img src="<%= project.image %>" class="project-image">
+		<img src="https://s3.eu-west-2.amazonaws.com/project2sparta<%= project.image.path %>" class="project-image">
 		<div class="hover-mask">
-			<h3><%= project.title %></h3>
-			<%= link_to "Show Page", project unless action_name == "show" %>	
+			<div class="hover-text">
+				<h3><%= project.title %></h3>
+				<%= link_to "Show Page", project unless action_name == "show" %>
+			</div>	
 		</div>
 	</div>
 </div>
