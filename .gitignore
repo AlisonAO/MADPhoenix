@@ -162,3 +162,6 @@ $RECYCLE.BIN/
 
 # Ignore files which container AWS keys
 .env
+
+# Ignore application configuration
+/config/application.yml
