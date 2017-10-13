@@ -43,9 +43,9 @@
 }
 
 .boxfield {
-	font-family: "Raleway", sans-serif;
-	font-weight: 300px;
-	margin-top: 18px;
+	 font-family: "Raleway", sans-serif;
+	 font-weight: 300px;
+	 margin-top: 18px;
     margin-bottom: 40px;
     background-color: transparent;
     letter-spacing: 5px;
@@ -56,6 +56,21 @@
     height: 33px;
     border-color: transparent;
     border-bottom-color: white;
+}
+
+.bigfield {
+   font-family: "Raleway", sans-serif;
+   font-weight: 300px;
+   margin-top: 18px;
+    margin-bottom: 40px;
+    background-color: transparent;
+    letter-spacing: 5px;
+    font-size: 20px;
+    color: white;
+    width: 450px;
+    height: 300px;
+    border-color: transparent;
+    border-bottom-color: white;  
 }
 
 #deltit {
