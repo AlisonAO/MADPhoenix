@@ -12,11 +12,11 @@ class ProjectsController < ApplicationController
     else
       @projects = Project.where(approved: true)
     end 
-    # if params[:search]
-    #   @projects = Project.search(params[:search]).order("created_at DESC")
-    # else
-    #   @projects = Project.all.order("created_at DESC")
-    # end
+    if params[:search]
+      @projects = Project.where(approved: true).search(params[:search]).order("created_at DESC")
+    else
+      @projects = Project.where(approved: true).order("created_at DESC")
+    end
   end
 
   def show
