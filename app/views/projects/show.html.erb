@@ -17,7 +17,10 @@
 <br>
 
 
-<iframe width="1300" height= "800" src="https://mashr3.github.io/Project-One-JS-Game/html/index.html"></iframe>
+<% if @project.embedd? %>
+	<iframe width="1300" height= "800" src="<%= @project.embedd %>"></iframe>
+<% end %>
+
 
 
 <% if user_signed_in? && current_user.id == @project.user_id %>
@@ -27,5 +30,3 @@
 
 	<%= link_to "Delete", @project, method: :delete, data: { confirm: "Are you sure?" } %>
 <% end %>
-
-

@@ -206,3 +206,7 @@ transition: all 1s ease-out;
   letter-spacing: 2px;
   font-size: 17px;
 }
+
+iframe[src=""] {
+    display: none;
+}
