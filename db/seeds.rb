@@ -9,6 +9,7 @@
 
 u1 = User.create!(first_name: "Judy", last_name: "Kahn", email: "someone@hotmail.com", password: "something")
 u2 = User.create!(first_name: "Mel", last_name: "Gibson", email: "someoneelse@sparta.com", password: "stuffone")
+u3 = User.create!(first_name: "Sorrow", last_name: "Sadness", email: "help@hotmail.com", password: "password", admin: true)
 
 
 Project.create!(title: "project1", creator: "greg", image: "https://upload.wikimedia.org/wikipedia/en/2/27/The_Project_Title_Card.jpg", description: "This is a project probably", readme: "I made this", embedd: "", tags: "PROJECT 1", user_id: u1.id)
