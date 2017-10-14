@@ -3,11 +3,20 @@ class ProjectsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    if params[:search]
-      @projects = Project.search(params[:search]).order("created_at DESC")
+    if signed_in? == true
+      if current_user.admin
+        @projects = Project.all
+      else
+        @projects = Project.where(approved: true)
+      end
     else
-      @projects = Project.all.order("created_at DESC")
-    end
+      @projects = Project.where(approved: true)
+    end 
+    # if params[:search]
+    #   @projects = Project.search(params[:search]).order("created_at DESC")
+    # else
+    #   @projects = Project.all.order("created_at DESC")
+    # end
   end
 
   def show
