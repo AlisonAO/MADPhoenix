@@ -8,9 +8,9 @@ class Project < ApplicationRecord
 
 	validates_attachment :image,
                      content_type: { content_type: ["image/jpeg", "image/gif", "image/png"] }
+    validates :description, presence: { message: "" }                
+	validates :title, :creator, :image, :readme, :tags, presence: true
 	validates :description, length: { minimum: 10, message: "is too short"}
-	validates :title, :creator, :image, :description, :readme, :tags, presence: true
-	
 
 	def self.search(search)
   		where("title ILIKE ? OR creator ILIKE ? OR description ILIKE ? OR tags ILIKE ?", "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%") 
