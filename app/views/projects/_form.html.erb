@@ -1,14 +1,15 @@
 
 <% if @project.errors.any? %>
-  <h3 class="boxlab"><%= pluralize(@project.errors.count, "error") %> prohibited your project from being saved:
-  </h3>
+  <h3 class="boxlab"><%= pluralize(@project.errors.count, "error") %> prohibited your project from being saved:</h3>
+
+ 
   
 <% end %>
 
 <div class="form1 form2">
 <%= form_for(@project) do |f| %>
 
-<div class="boxlab">
+ <div class="boxlab">
   <div><%= f.label :title %><br></div>
     <%= f.text_field :title, class: "boxfield" %>
 </div>
