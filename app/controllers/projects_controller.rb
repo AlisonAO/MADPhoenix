@@ -11,7 +11,7 @@ class ProjectsController < ApplicationController
   end
 
   def show
-    @cond == true
+   
      @project = Project.find(params[:id])
   end
 
