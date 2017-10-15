@@ -1,3 +1,5 @@
+
+
 body {
 	font-family: "Raleway", sans-serif;
 	background-color: #fff;
@@ -6,13 +8,17 @@ body {
 	margin-top: 130px;
 	letter-spacing: 1px;
 	background-image: url("https://www.spartaglobal.com/img/dark-bg.jpg");
+
 	background-size: cover;
 	background-position: center;
+
 }
 
 #body {
 	background-image: url("https://www.spartaglobal.com/img/dark-bg.jpg");
 	background-size: cover;
+
+
 }
 
 a {
