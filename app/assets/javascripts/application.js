@@ -36,7 +36,7 @@ $('.bigfield').keypress(function(event) {
       var s = $(this).val();
       $(this).val(s+"\n");
    }
-});​
+});
 
 function stopRKey(evt) { 
   var evt = (evt) ? evt : ((event) ? event : null); 
