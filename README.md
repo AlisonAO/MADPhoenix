@@ -1,24 +1,41 @@
-# README
+# Project 2 - MAD Phoenix
+Sparta Project_2 - “ShowMe” 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+##Description 
 
-Things you may want to cover:
+This web application is a showcase of Sparta Global projects produced by all Spartans during their time and after compeleting the academy. All technologies learnt in the first 5 weeks of training were used to create this application. This application follows all the RESTful standards and was created following the SCRUM agile methodology. 
 
-* Ruby version
+##Features and Implementation 
+The web app can perform all of the basic CRUD actions (Create, Read, Update, Delete). 
+Show page with more information about specific project.
+Also implemented an admin role that allows for the approval of projects before being visible to all. 
+A search bar that allows for filtering of projects based on what you search. 
+Image hosting on the cloud using AWS (s3).
+SigIn/SignOut with profile creation.
 
-* System dependencies
 
-* Configuration
+##How to get it running 
+In terminal git clone this repository and begin a new rails server using ```rails s``` 
 
-* Database creation
 
-* Database initialization
+##Technologies Used
 
-* How to run the test suite
+HTML. 
+ 
+CSS. 
 
-* Services (job queues, cache servers, search engines, etc.)
+Javascript (jQuery) 
 
-* Deployment instructions
+Ruby   
 
-* ...
+Ruby on Rails 
+
+Various Ruby gems
+
+###Contributors 
+
+Alison Opeloyeru 
+
+Michael Ash 
+ 
+Dom Jones     

@@ -22,7 +22,7 @@ $(function () {
 
 		$('html, body').animate({
 			scrollTop: $(linkHref).offset().top
-		}, 1500)
+		}, 2500)
 		e.preventDefault();
 
 	})
@@ -36,7 +36,9 @@ $('.bigfield').keypress(function(event) {
       var s = $(this).val();
       $(this).val(s+"\n");
    }
-});
+
+})
+
 
 function stopRKey(evt) { 
   var evt = (evt) ? evt : ((event) ? event : null); 
