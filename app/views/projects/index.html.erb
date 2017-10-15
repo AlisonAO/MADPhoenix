@@ -8,17 +8,13 @@
 	</div>
 </div>
 
-
 <div id="body">
-<br><br><br><br><br><br>
 
 <a href="#all-project" class="smoothScroll"><button class="button">See All Projects</button></a>
 
 <% if user_signed_in? %>
 	<h3 id="new-project"><%= link_to "New Project", new_project_path %></h3>
 <% end %>
-
-<br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 <div class="search">
 	<div><%= form_tag(projects_path, :method => "get", id: "search-form") do %></div>
@@ -29,11 +25,11 @@
 	<h4 class="search-text">There are no Projects containing the term <%= params[:search] %>.</h4>
 	<% end %>
 </div>
+
 <a id="all-project"></a>
+
 <div class="projects">
 	<%= render @projects, class: "indexpics" %>
-
-
 
 </div>
 </div>

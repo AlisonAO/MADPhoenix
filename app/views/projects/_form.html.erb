@@ -1,9 +1,5 @@
-
 <% if @project.errors.any? %>
-  <h3 class="boxlab"><%= pluralize(@project.errors.count, "error") %> prohibited your project from being saved:</h3>
-
- 
-  
+  <h3 class="boxlab"><%= pluralize(@project.errors.count, "error") %> prohibited your project from being saved:</h3> 
 <% end %>
 
 <div class="form1 form2">
@@ -26,12 +22,12 @@
 
 <div class="boxlab">
   <div><%= f.label :description %><br></div>
-  <%= f.text_field :description, class: "boxfield" %>
+  <%= f.text_area :description, class: "bigfield" %>
 </div>
 
 <div class="boxlab"> 
   <div><%= f.label :readme %><br></div>
-  <%= f.text_field :readme, class: "boxfield" %>
+  <%= f.text_area :readme, class: "bigfield" %>
 </div>
 
 <div class="boxlab">
@@ -47,7 +43,6 @@
   <%= f.submit class: "submit" %>
 <% end %>
 
-<br><br><br><br><br>
 </div>
 
 
