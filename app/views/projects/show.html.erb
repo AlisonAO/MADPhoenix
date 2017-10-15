@@ -2,9 +2,11 @@
 
 <%= render @project %>
 
+
 <%= link_to "Back to Home", projects_path, class: "button" %>
 
 <h3 class="showtit">Project Creator</h3><div class="showp"><%= @project.creator %></div>
+<h3 class="showtit">GitHub Link</h3><div class="showp"><%= @project.gh_link %></div>
 <h3 class="showtit">Description</h3><div class="showp"><%= markdown(@project.description)%></div>
 <h3 class="showtit">Readme</h3><div class="showp"><%= markdown(@project.readme) %></div>
 <h3 class="showtit">Creator Tags</h3><div class="showp"><%= @project.tags %></div>
@@ -18,3 +20,6 @@
 	<%= link_to "Delete", @project, method: :delete, data: { confirm: "Are you sure?" }, class: "submit" %>
 <% end %></div>
 
+
+
+ <a href="/projects"><img src="/images/sparta-global-logo-white.svg" id="logo"></a>
