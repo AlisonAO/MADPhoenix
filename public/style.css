@@ -2,11 +2,14 @@ body {
 	font-family: "Raleway", sans-serif;
 	background-color: #fff;
 	text-align: center;
-	background-image: url("https://www.spartaglobal.com/img/dark-bg.jpg");
-	background-size: cover;
 	color: #fff;
 	margin-top: 130px;
 	letter-spacing: 1px;
+}
+
+#body {
+	background-image: url("https://www.spartaglobal.com/img/dark-bg.jpg");
+	background-size: cover;
 }
 
 a {
@@ -49,6 +52,8 @@ h5 {
     background-image: url("/maxresdefault.jpg");
     background-repeat: no-repeat; 	
     background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
 }
 
 #landingRule {

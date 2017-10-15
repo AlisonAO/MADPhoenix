@@ -27,3 +27,22 @@ $(function () {
 
 	})
 });
+
+document.onkeypress = stopRKey; 
+
+$('.bigfield').keypress(function(event) {
+   if (event.which == 13) {
+      event.preventDefault();
+      var s = $(this).val();
+      $(this).val(s+"\n");
+   }
+});​
+
+function stopRKey(evt) { 
+  var evt = (evt) ? evt : ((event) ? event : null); 
+  var node = (evt.target) ? evt.target : ((evt.srcElement) ? evt.srcElement : null); 
+  if ((evt.keyCode == 13) && (node.type=="text"))  {return false;} 
+} 
+
+
+
