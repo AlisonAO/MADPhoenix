@@ -16,18 +16,19 @@
 //= require jquery
 //= require jquery_ujs
 
+// smooth scroll function
 $(function () {
 	$('.smoothScroll').click(function (e) {
 		var linkHref = $(this).attr('href');
 
 		$('html, body').animate({
 			scrollTop: $(linkHref).offset().top
-		}, 1500)
+		}, 2500)
 		e.preventDefault();
 
 	})
 });
-
+// markdown, prevents enter key default
 document.onkeypress = stopRKey; 
 
 $('.bigfield').keypress(function(event) {
@@ -36,7 +37,9 @@ $('.bigfield').keypress(function(event) {
       var s = $(this).val();
       $(this).val(s+"\n");
    }
-});​
+
+})
+
 
 function stopRKey(evt) { 
   var evt = (evt) ? evt : ((event) ? event : null); 

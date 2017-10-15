@@ -1,9 +1,5 @@
-
 <% if @project.errors.any? %>
-  <h3 class="boxlab"><%= pluralize(@project.errors.count, "error") %> prohibited your project from being saved:</h3>
-
- 
-  
+  <h3 class="boxlab"><%= pluralize(@project.errors.count, "error") %> prohibited your project from being saved:</h3> 
 <% end %>
 
 <div class="form1 form2">
@@ -17,6 +13,11 @@
 <div class="boxlab">
  <div><%= f.label :creator %><br></div>
   <%= f.text_field :creator, class: "boxfield" %>
+</div>
+
+<div class="boxlab">
+ <div><%= f.label :gh_link %><br></div>
+  <%= f.text_field :gh_link, class: "boxfield" %>
 </div>
 
 <div class="boxlab">
@@ -47,7 +48,6 @@
   <%= f.submit class: "submit" %>
 <% end %>
 
-<br><br><br><br><br>
 </div>
 
 

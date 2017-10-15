@@ -2,26 +2,22 @@
 
 <%= render @project %>
 
-<br>
 
-<%= link_to "Back to Home", projects_path, class: "button" %>
-
-<br><br><br><br> 
-
-	<h3><%= @project.creator %></h3>
-	<p><%= markdown(@project.description) %></p>
-	<p><%= markdown(@project.readme) %></p>
-	<p><%= @project.tags %></p>
-
-<br>
-<br>
-
-<% if user_signed_in? && current_user.id == @project.user_id %>
-	<%= link_to "Edit Page", edit_project_path(@project) %> 
-
-	<br>
-
-	<%= link_to "Delete", @project, method: :delete, data: { confirm: "Are you sure?" } %>
+<%= link_to "Back to Home", projects_path, class: "button", id: "work"%>
+<!-- Markdown gem -->
+<h3 class="showtit">Project Creator</h3><div class="showp"><%= @project.creator %></div>
+<h3 class="showtit">GitHub Link</h3><div class="showp"><%= @project.gh_link %></div>
+<h3 class="showtit">Description</h3><div class="showp"><%= markdown(@project.description)%></div>
+<h3 class="showtit">Readme</h3><div class="showp"><%= markdown(@project.readme) %></div>
+<h3 class="showtit">Creator Tags</h3><div class="showp"><%= @project.tags %></div>
+<!-- project embedded if collumn not empty -->
+<% if @project.embedd? %>
+	<div id="emb"><iframe width="1300" height= "800" src="<%= @project.embedd %>"></iframe></div>
 <% end %>
+<!-- only visable to signed in user -->
+<div><% if user_signed_in? && current_user.id == @project.user_id %>
+	<%= link_to "Edit Page", edit_project_path(@project), class: "head2" %> <br>
+	<%= link_to "Delete", @project, method: :delete, data: { confirm: "Are you sure?" }, class: "head2" %>
+<% end %></div>
 
 

@@ -34,20 +34,20 @@
     <%= f.text_field :github_link, autofocus: true, class: "boxfield" %>
   </div>
 
-  <div class="field">
+  <!-- <div class="field">
     <div class="boxlab"><%= f.label :linkedIn_link %><br /></div>
     <%= f.text_field :linkedin_link, autofocus: true, class: "boxfield" %>
-  </div>
+  </div> -->
 
   <div class="field">
     <div class="boxlab"><%= f.label :Role %><br /></div>
     <%= f.text_field :position, autofocus: true, class: "boxfield" %>
   </div>
 
-  <div class="field">
+<!--   <div class="field">
     <div class="boxlab"><%= f.label :profile_pic %><br /></div>
     <%= f.text_field :profile_pic, autofocus: true, class: "boxfield" %>
-  </div>
+  </div> -->
 
   <br><br>
   <hr>
@@ -74,7 +74,7 @@
   </div>
 
   <div class="actions">
-    <%= f.submit "Update Profile", class: "submit" %>
+    <%= f.submit "Update Profile", class: "submit", id: "mash"%>
   </div>
 
 <br><br>
