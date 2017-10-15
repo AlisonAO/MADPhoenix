@@ -3,19 +3,24 @@ class ProjectsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    @cond == false
-    @projects = Project.all
-    if params[:search]
-      @projects = Project.search(params[:search]).order("created_at DESC")
+    if signed_in? == true
+      if current_user.admin
+        @projects = Project.all
+      else
+        @projects = Project.where(approved: true)
+      end
     else
-      @projects = Project.all.order("created_at DESC")
+      @projects = Project.where(approved: true)
+    end 
+    if params[:search]
+      @projects = Project.where(approved: true).search(params[:search]).order("created_at DESC")
+    else
+      @projects = Project.where(approved: true).order("created_at DESC")
     end
   end
 
- 
-
   def show
-    @cond == true
+   
      @project = Project.find(params[:id])
   end
 
@@ -37,12 +42,18 @@ class ProjectsController < ApplicationController
   end
 
   def update
-    @project = current_user.projects.find(params[:id])
-    if @project.update!(project_params)
-      redirect_to "/projects"
+    if signed_in?
+      if current_user.admin
+        project = Project.find(params[:id])
+        project.update(project_params)
+      else
+        project = current_user.projects.find(params[:id])
+        project.update!(project_params)
+      end
     else
       render :edit
     end
+    redirect_to "/projects"
   end
 
   def destroy
@@ -52,6 +63,6 @@ class ProjectsController < ApplicationController
 
   protected
     def project_params
-      params.require(:project).permit(:title, :creator, :image, :description, :readme, :embedd, :tags)
+      params.require(:project).permit(:title, :creator, :image, :description, :readme, :embedd, :tags, :approved, :id)
     end
 end

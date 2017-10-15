@@ -9,3 +9,16 @@
 		</div>
 	</div>
 </div>
+
+<% if signed_in? %>
+	<% if current_user.admin  %>
+
+		<%= form_for(project) do |f| %>
+			<%= f.hidden_field :id, value: project.id %>
+	        <%= f.label "Approved" %>
+	    	<%= f.check_box(:approved) %>
+	        <%= f.submit "Submit" %>
+	    <% end %>
+	<% end %>
+<% end %>
+
