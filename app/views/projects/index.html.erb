@@ -33,8 +33,9 @@
 
 </div>
 
-
-
-
 </div>
+
+<% unless @projects.empty? %>
+  <%= will_paginate @projects %>
+<% end %>
 
