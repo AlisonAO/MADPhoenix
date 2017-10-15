@@ -7,10 +7,8 @@ class ProjectsController < ApplicationController
   def index
     if signed_in? == true
       if current_user.admin
-        # @projects = Project.all
         @projects = Project.paginate(:page => params[:page], :per_page => 10)
       else
-        # @projects = Project.where(approved: true)
         @projects = Project.where(:approved => true).paginate(:page => params[:page], :per_page => 10).order('id DESC')
       end
     else
