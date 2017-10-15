@@ -12,6 +12,7 @@ class ProjectsController < ApplicationController
     else
       @projects = Project.where(approved: true)
     end 
+    render template: "projects/index"
     if params[:search]
       @projects = Project.where(approved: true).search(params[:search]).order("created_at DESC")
     else

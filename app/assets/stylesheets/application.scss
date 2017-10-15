@@ -13,6 +13,16 @@
  *= require_tree .
  *= require_self
  */
+
+ html {
+  height: 100%;
+  width: 100%;
+  background-image: url("https://www.spartaglobal.com/img/dark-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
  .formtitle {
  	color: white;
 	font-family: "Raleway", sans-serif;
@@ -56,6 +66,37 @@
     height: 33px;
     border-color: transparent;
     border-bottom-color: white;
+}
+
+.showtit {
+  font-family: "Raleway", sans-serif;
+  font-weight: 300px;
+  margin-top: 18px;
+  background-color: transparent;
+  letter-spacing: 5px;
+  font-size: 20px;
+  text-align: center;
+  color: white;
+  width: 450px;
+  border-color: transparent;
+  border-bottom-color: white;
+  margin-bottom: 15px;
+  margin-left: 90px;
+}
+
+.pp32 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 300px;
+  margin-top: 18px;
+  background-color: transparent;
+  letter-spacing: 5px;
+  font-size: 20px;
+  text-align: center;
+  color: white;
+  width: 590px;
+  border-color: transparent;
+  border-bottom-color: white;
+  margin-bottom: 15px;
 }
 
 .bigfield {
@@ -123,7 +164,39 @@
     height: 40px;
     width: 160px;
     letter-spacing: 6px;
-  text-decoration: none;
+    text-decoration: none;
+}
+
+.head2 {
+    font-size: 15px;
+    border-radius: 7px;
+    color: white;
+    border-color: white;
+    height: 40px;
+    width: 160px;
+    letter-spacing: 6px;
+    text-decoration: none;
+}
+
+#logout_edit {
+    text-align: end;
+    display: inline-grid;
+    margin-left: 900px;
+}
+
+#login_signup {
+    text-align: end;
+    display: inline-grid;
+    margin-left: 900px;
+}
+
+.showp {
+    border: solid white 2px;
+    width: 700px;
+    display: inline-block;
+    padding: 7px 7px 7px 30px;
+    margin-bottom: 40px;
+    text-align: left;
 }
 
 .search-text {
@@ -132,6 +205,10 @@
     font-size: 140%; 
     font-weight: 300;
     letter-spacing: 12px; 
+}
+
+#search {
+      margin-left: 67px;
 }
 
 .validation-error { 
@@ -214,3 +291,21 @@ transition: all 1s ease-out;
 .hover-text {
   margin-top: 150px;
 }
+
+#mash {
+  margin-bottom: 50px;
+}
+
+#mash2 {
+  margin-bottom: 300px;
+}
+
+#mash4 {
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+#bbox {
+  margin-bottom: 200px;
+}
+
