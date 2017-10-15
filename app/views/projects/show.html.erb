@@ -4,16 +4,17 @@
 
 <%= link_to "Back to Home", projects_path, class: "button" %>
 
-<h3><%= @project.creator %></h3>
-<p><%= markdown(@project.description) %></p>
-<p><%= markdown(@project.readme) %></p>
-<p><%= @project.tags %></p>
+<h3 class="showtit">Project Creator</h3><div class="showp"><%= @project.creator %></div>
+<h3 class="showtit">Description</h3><div class="showp"><%= markdown(@project.description)%></div>
+<h3 class="showtit">Readme</h3><div class="showp"><%= markdown(@project.readme) %></div>
+<h3 class="showtit">Creator Tags</h3><div class="showp"><%= @project.tags %></div>
 
 <% if @project.embedd? %>
 	<div id="emb"><iframe width="1300" height= "800" src="<%= @project.embedd %>"></iframe></div>
 <% end %>
 
-<% if user_signed_in? && current_user.id == @project.user_id %>
+<div><% if user_signed_in? && current_user.id == @project.user_id %>
 	<%= link_to "Edit Page", edit_project_path(@project), class: "submit" %> 
 	<%= link_to "Delete", @project, method: :delete, data: { confirm: "Are you sure?" }, class: "submit" %>
-<% end %>
+<% end %></div>
+
