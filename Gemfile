@@ -39,7 +39,7 @@ gem "devise"
 
 gem 'mini_magick'
 
-gem 'filterrific'
+gem 'will_paginate'
 
 gem 'redcarpet'
 gem 'pygments.rb'
