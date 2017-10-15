@@ -8,6 +8,8 @@
 	</div>
 </div>
 
+<div id="body">
+
 <a href="#all-project" class="smoothScroll"><button class="button">See All Projects</button></a>
 
 <% if user_signed_in? %>
@@ -28,4 +30,6 @@
 
 <div class="projects">
 	<%= render @projects, class: "indexpics" %>
+
+</div>
 </div>

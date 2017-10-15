@@ -2,11 +2,14 @@ body {
 	font-family: "Raleway", sans-serif;
 	background-color: #fff;
 	text-align: center;
-	background-image: url("https://www.spartaglobal.com/img/dark-bg.jpg");
-	background-size: cover;
 	color: #fff;
 	margin-top: 130px;
 	letter-spacing: 1px;
+}
+
+#body {
+	background-image: url("https://www.spartaglobal.com/img/dark-bg.jpg");
+	background-size: cover;
 }
 
 a {
@@ -49,6 +52,8 @@ h5 {
     background-image: url("/maxresdefault.jpg");
     background-repeat: no-repeat; 	
     background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
 }
 
 #landingRule {
@@ -102,32 +107,29 @@ h5 {
     font-size: 1.3em;
 }
 
-/*#block {
-	height: 400px;
-	width: 100%;
-}*/
 
 .projects {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap; 
-	/*justify-content: space-evenly;*/
+	/*justify-content: space-evenly;	*/
 	width: 100%;
 	margin-top: 150px;
 }
 
 .project {
-	display: inline-block;
+	display: inline-flex;
 	width: 40%;
     height: 405px;
-    margin-right: 100px;
-    margin-left: 50px;
+    margin-right: 50px;
+    margin-left: 75px;
     margin-bottom: 100px;
+    flex-direction: row;
+    flex-wrap: wrap;
+
 }
 
 .project-image {
-	/*height: 600px;*/
-	/*width: 100%;*/
 	z-index: -1;
 	position: absolute;
 	height: 100%;
