@@ -247,7 +247,10 @@ opacity:0.2;
 -moz-transition: all 1s ease-out;
 -o-transition: all 1s ease-out;
 transition: all 1s ease-out;
+}
 
+#search {
+  margin-left: 67px;
 }
 .button {
     -webkit-transition-duration: 0.4s; 
@@ -309,3 +312,11 @@ transition: all 1s ease-out;
   margin-bottom: 200px;
 }
 
+#kitty {
+  height: 75px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  border-radius: 8px;
+}
