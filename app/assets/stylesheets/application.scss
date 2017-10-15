@@ -13,6 +13,16 @@
  *= require_tree .
  *= require_self
  */
+
+ html {
+  height: 100%;
+  width: 100%;
+  background-image: url("https://www.spartaglobal.com/img/dark-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
  .formtitle {
  	color: white;
 	font-family: "Raleway", sans-serif;
@@ -72,6 +82,21 @@
   border-bottom-color: white;
   margin-bottom: 15px;
   margin-left: 90px;
+}
+
+.pp32 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 300px;
+  margin-top: 18px;
+  background-color: transparent;
+  letter-spacing: 5px;
+  font-size: 20px;
+  text-align: center;
+  color: white;
+  width: 590px;
+  border-color: transparent;
+  border-bottom-color: white;
+  margin-bottom: 15px;
 }
 
 .bigfield {
@@ -182,6 +207,10 @@
     letter-spacing: 12px; 
 }
 
+#search {
+      margin-left: 67px;
+}
+
 .validation-error { 
    color: red;
    position: absolute;
@@ -279,3 +308,4 @@ transition: all 1s ease-out;
 #bbox {
   margin-bottom: 200px;
 }
+
