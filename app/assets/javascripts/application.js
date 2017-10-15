@@ -16,6 +16,7 @@
 //= require jquery
 //= require jquery_ujs
 
+// smooth scroll function
 $(function () {
 	$('.smoothScroll').click(function (e) {
 		var linkHref = $(this).attr('href');
@@ -27,7 +28,7 @@ $(function () {
 
 	})
 });
-
+// markdown, prevents enter key default
 document.onkeypress = stopRKey; 
 
 $('.bigfield').keypress(function(event) {

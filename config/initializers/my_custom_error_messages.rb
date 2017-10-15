@@ -8,3 +8,5 @@ ActionView::Base.field_error_proc = Proc.new do |html_tag, instance|
   end
 
 end
+
+# This moves the validation messages and puts them next to the text field

@@ -1,3 +1,5 @@
+
+
 <div class="project">
 	<div class="hover-container">
 		<img src="https://s3.eu-west-2.amazonaws.com/project2sparta<%= project.image.path %>" class="project-image">
@@ -10,9 +12,11 @@
 	</div>
 </div>
 
-<% if signed_in? %>
-	<% if current_user.admin  %>
 
+<!-- ADMIN CODE -->
+<!-- The checkbox feature for admins. The admin index page will display all projects, and admins have the ability to approve or removal approval -->
+<% if signed_in? %>
+	<% if current_user.admin %>
 		<%= form_for(project) do |f| %>
 			<%= f.hidden_field :id, value: project.id %>
 	        <%= f.label "Approved" %>
@@ -21,4 +25,5 @@
 	    <% end %>
 	<% end %>
 <% end %>
+
 
