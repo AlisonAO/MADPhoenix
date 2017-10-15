@@ -14,13 +14,32 @@
  *= require_self
  */
 
- html {
-  height: 100%;
-  width: 100%;
-  background-image: url("https://www.spartaglobal.com/img/dark-bg.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+#please {
+  height: 200px;
+}
+
+#user_remember_me {
+  height: 30px;
+  width: 30px;
+}
+
+#star {
+      margin-bottom: 100px;
+}
+
+#adminbut {
+  display: inline-block
+}
+
+#work {
+    display: block;
+    margin: 0 auto;
+}
+
+#project_approved {
+    height: 30px;
+    width: 29px;
+    vertical-align: middle;
 }
 
  .formtitle {

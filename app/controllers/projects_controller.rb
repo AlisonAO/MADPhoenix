@@ -3,7 +3,7 @@ class ProjectsController < ApplicationController
   before_action :authenticate_user!
   skip_before_action :authenticate_user!, only: [:index, :show]
 
-
+# The index - shows all, search feature, admin feature, multiple pages feature
   def index
     if signed_in? == true
       if current_user.admin
@@ -21,16 +21,16 @@ class ProjectsController < ApplicationController
       @projects = Project.where(approved: true).order("created_at DESC")
     end
   end
-
+# Shows single project
   def show
    
      @project = Project.find(params[:id])
   end
-
+# New project
   def new
     @project = current_user.projects.new
   end
-
+# creates new project
   def create
     @project = current_user.projects.create(project_params)
     if @project.save
@@ -39,11 +39,11 @@ class ProjectsController < ApplicationController
       render :new
     end
   end
-
+# edits projects
   def edit
     @project = current_user.projects.find(params[:id])
   end
-
+# updates projects
   def update
     if signed_in?
       if current_user.admin
@@ -58,7 +58,7 @@ class ProjectsController < ApplicationController
     end
     redirect_to "/projects"
   end
-
+# deletes projects
   def destroy
     current_user.projects.destroy(params[:id])
     redirect_to projects_url
