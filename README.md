@@ -32,11 +32,11 @@ Ruby on Rails
 
 ### Ruby Gems 
 
-devise -- This gem was used to create different user accounts, with password protection, as well as creating an admin account with additional privileges.
+* devise -- This gem was used to create different user accounts, with password protection, as well as creating an admin account with additional privileges.
 
-redcarpet -- This gem was used to ensure that users could write the description and readme section of their projects using Markdown syntax, and the gem would render it accordingly. 
+* redcarpet -- This gem was used to ensure that users could write the description and readme section of their projects using Markdown syntax, and the gem would render it accordingly. 
 
-paperclip & aws-sdk -- A file management gem, which allows the user to upload files from local storage onto the local server. The aws-sdk gem, allowed communication to Amazon Web Services, to host the file in an S3 bucket online.
+* paperclip & aws-sdk -- A file management gem, which allows the user to upload files from local storage onto the local server. The aws-sdk gem, allowed communication to Amazon Web Services, to host the file in an S3 bucket online.
 
 
 ### Contributors 
