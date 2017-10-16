@@ -15,22 +15,29 @@ SigIn/SignOut with profile creation.
 
 
 ## How to get it running 
-In terminal git clone this repository and begin a new rails server using ```rails s``` 
+Click the clone button, and use the link provided to git clone the repository. 
+Run a ```bundle install``` to download all the necessary gems. 
+Run ```rake db:create```, ```rake db:migrate```, ```rake db:seed```.
+Run "rails s" to start your server.
+Go to your ```localhost:3000```, to use the project
 
 
 ## Technologies Used
 
-HTML. 
- 
-CSS. 
-
+HTML 5 
+CSS 
 Javascript (jQuery) 
-
 Ruby   
-
 Ruby on Rails 
 
-Various Ruby gems
+# Ruby Gems 
+
+devise -- This gem was used to create different user accounts, with password protection, as well as creating an admin account with additional privileges.
+
+redcarpet -- This gem was used to ensure that users could write the description and readme section of their projects using Markdown syntax, and the gem would render it accordingly. 
+
+paperclip & aws-sdk -- A file management gem, which allows the user to upload files from local storage onto the local server. The aws-sdk gem, allowed communication to Amazon Web Services, to host the file in an S3 bucket online.
+
 
 ### Contributors 
 
