@@ -24,10 +24,10 @@ Go to your ```localhost:3000```, to use the project
 
 ## Technologies Used
 
-HTML 5 
-CSS 
-Javascript (jQuery) 
-Ruby   
+HTML 5  
+CSS  
+Javascript (jQuery)  
+Ruby  
 Ruby on Rails 
 
 ### Ruby Gems 
