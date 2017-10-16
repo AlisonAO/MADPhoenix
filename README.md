@@ -30,7 +30,7 @@ Javascript (jQuery)
 Ruby   
 Ruby on Rails 
 
-# Ruby Gems 
+### Ruby Gems 
 
 devise -- This gem was used to create different user accounts, with password protection, as well as creating an admin account with additional privileges.
 
