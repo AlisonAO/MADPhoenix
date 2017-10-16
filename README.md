@@ -15,10 +15,10 @@ SigIn/SignOut with profile creation.
 
 
 ## How to get it running 
-Click the clone button, and use the link provided to git clone the repository. 
-Run a ```bundle install``` to download all the necessary gems. 
-Run ```rake db:create```, ```rake db:migrate```, ```rake db:seed```.
-Run "rails s" to start your server.
+Click the clone button, and use the link provided to git clone the repository.  
+Run a ```bundle install``` to download all the necessary gems.  
+Run ```rake db:create```, ```rake db:migrate```, ```rake db:seed```.  
+Run "rails s" to start your server.  
 Go to your ```localhost:3000```, to use the project
 
 
